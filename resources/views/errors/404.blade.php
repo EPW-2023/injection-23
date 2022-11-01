@@ -1,6 +1,7 @@
 @extends('layout.layout')
 @section('content')
     <div id="bg-404-error">
+        <div class="container-batik"><img src="{{ asset('img/Batik.png') }}" class="batik" alt=""></div>
         <div class="prev-404-construct">
             <div class="container">
                 <div class="wrapper-image-text">

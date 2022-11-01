@@ -1,9 +1,26 @@
 #bg-404-error {
-    background-size: cover;
-    background-image: url("../../img/Group\ 131.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    // background-size: cover;
+    // background-image: url("../../img/Group\ 131.png");
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-position: center center;
+    .container-batik {
+        width: 100%;
+    }
+    .batik {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    background: radial-gradient(
+        111.58% 167.36% at 51.72% 126.13%,
+        #c338ff 0%,
+        #bc35fb 12%,
+        #a72eef 31%,
+        #8622dd 53%,
+        #5811c3 78%,
+        #2b00a9 100%
+    );
     height: 100vh;
     .prev-404-construct {
         padding-top: 200px;
@@ -25,6 +42,8 @@
 .on-404-paraf {
     font-size: 36px;
 }
+
+//responsive breakouts
 @media (max-width: 1200px) {
     .wrapper-image-text {
         flex-direction: column-reverse;
