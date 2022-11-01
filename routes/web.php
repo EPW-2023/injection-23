@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/help', function () {
     return view('help');
 });
+
+Route::get('/error', function () {
+    return view('error.404');
+});
