@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -6882,6 +6883,51 @@ textarea.form-control-lg {
   margin-top: 10vh;
 }
 
+#bg-404-error {
+  background-size: cover;
+  background-image: url("../../img/Group 131.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 100vh;
+}
+#bg-404-error .prev-404-construct {
+  padding-top: 200px;
+}
+#bg-404-error .prev-404-construct .wrapper-image-text {
+  display: flex;
+  gap: 50px;
+}
+
+#bg-404-error {
+  color: white;
+}
+
+.on-404-text {
+  width: 100%;
+  padding-top: 50px;
+  font-size: 87px;
+  font-weight: bold;
+}
+
+.on-404-paraf {
+  font-size: 36px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper-image-text {
+    flex-direction: column-reverse;
+  }
+  .on-404-text {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .on-404-paraf {
+    font-size: 18px;
+    text-align: center;
+  }
+}
 .align-baseline {
   vertical-align: baseline !important;
 }

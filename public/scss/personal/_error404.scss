@@ -1,0 +1,43 @@
+#bg-404-error {
+    // padding-top: 100px;
+    background-size: cover;
+    background-image: url("../../img/Group\ 131.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    .prev-404-construct {
+        padding-top: 200px;
+        .wrapper-image-text {
+            display: flex;
+            gap: 50px;
+        }
+    }
+}
+#bg-404-error {
+    color: #ffff;
+}
+.on-404-text {
+    width: 100%;
+    padding-top: 50px;
+    font-size: 87px;
+    font-weight: bold;
+}
+.on-404-paraf {
+    font-size: 36px;
+}
+@media (max-width: 1200px) {
+    .wrapper-image-text {
+        flex-direction: column-reverse;
+    }
+    .on-404-text {
+        // padding-top: 50px;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .on-404-paraf {
+        font-size: 18px;
+        text-align: center;
+    }
+}
