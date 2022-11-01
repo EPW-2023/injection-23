@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="wrapper-image-text">
                     <div class="">
-                        <img class="img-fluid" src="{{ asset('img/City.png') }}" alt="Future City in reality">
+                        <img class="img-fluid future-city" src="{{ asset('img/City.png') }}" alt="Future City in reality">
                     </div>
                     <div class="">
                         <h1 class="on-404-text">404 Page Not Found</h1>

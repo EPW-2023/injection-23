@@ -6915,6 +6915,14 @@ textarea.form-control-lg {
 }
 
 @media (max-width: 1200px) {
+  body {
+    background-size: cover;
+    background-image: url("../../img/Group 131.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+  }
   .wrapper-image-text {
     flex-direction: column-reverse;
   }

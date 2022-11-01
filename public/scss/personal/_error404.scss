@@ -27,6 +27,17 @@
     font-size: 36px;
 }
 @media (max-width: 1200px) {
+    body {
+        background-size: cover;
+        background-image: url("../../img/Group\ 131.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        height: 100vh;
+    }
+    .future-city {
+        // display: none;
+    }
     .wrapper-image-text {
         flex-direction: column-reverse;
     }
