@@ -6883,6 +6883,11 @@ textarea.form-control-lg {
   margin-top: 10vh;
 }
 
+.logo-epw {
+  position: absolute;
+  width: 200px;
+}
+
 #bg-404-error {
   background-size: cover;
   background-image: url("../../img/Group 131.png");
@@ -6926,6 +6931,44 @@ textarea.form-control-lg {
   .on-404-paraf {
     font-size: 18px;
     text-align: center;
+  }
+}
+.logo-epw {
+  position: absolute;
+  width: 200px;
+}
+
+.wrapper-comingsoon-text {
+  margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.on-comingsoon-text {
+  font-size: 90px;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper-comingsoon-text {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 768px) {
+  .on-comingsoon-text {
+    font-size: 60px;
+  }
+  .logo-epw {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .on-comingsoon-text {
+    font-size: 40px;
+  }
+  .logo-epw {
+    width: 80px;
   }
 }
 .align-baseline {
