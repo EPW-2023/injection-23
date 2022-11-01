@@ -1,5 +1,6 @@
 @extends('layout.layout')
 @section('content')
+    <img src="{{ asset('img/Logo EPW.png') }}" class="logo-epw m-3" alt="Engineering Physics Week (EPW) Logo">
     <div id="bg-404-error">
         <div class="container-batik"><img src="{{ asset('img/Batik.png') }}" class="batik" alt=""></div>
         <div class="prev-404-construct">

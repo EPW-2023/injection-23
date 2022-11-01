@@ -14,12 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect(route('comingsoon'));
 });
 Route::get('/help', function () {
     return view('help');
 });
-
-Route::get('/error', function () {
-    return view('error.404');
-});
+Route::get('/comingsoon', function () {
+    return view('errors.comingsoon');
+})->name('comingsoon');
