@@ -2,11 +2,12 @@
 @section('content')
     <img src="{{ asset('img/Logo EPW.png') }}" class="logo-epw m-3" alt="Engineering Physics Week (EPW) Logo">
     <div id="bg-404-error">
+        <div class="container-batik"><img src="{{ asset('img/Batik.png') }}" class="batik" alt=""></div>
         <div class="prev-404-construct">
             <div class="container">
                 <div class="wrapper-image-text">
                     <div class="">
-                        <img class="img-fluid" src="{{ asset('img/City.png') }}" alt="Future City in reality">
+                        <img class="img-fluid future-city" src="{{ asset('img/City.png') }}" alt="Future City in reality">
                     </div>
                     <div class="">
                         <h1 class="on-404-text">404 Page Not Found</h1>
