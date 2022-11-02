@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u1607998/
+    - export DEPLOYPATH=/home/epwi6536/public_html/epwits.org
     - /bin/cp -r * $DEPLOYPATH #copy all from root
 #    - /bin/cp -r ./public/* $DEPLOYPATH/public_html/
     - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/js
