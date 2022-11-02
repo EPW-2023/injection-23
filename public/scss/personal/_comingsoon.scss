@@ -1,9 +1,13 @@
 .logo-epw {
     position: absolute;
-    width: 200px;
+    width: 100px;
 }
+
+.prev-comingsoon-construct {
+    padding-top: 30vh;
+}
+
 .wrapper-comingsoon-text {
-    margin-top: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +28,7 @@
         font-size: 60px;
     }
     .logo-epw {
-        width: 100px;
+        width: 90px;
     }
 }
 @media screen and (max-width: 576px) {

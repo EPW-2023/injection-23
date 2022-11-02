@@ -6885,7 +6885,7 @@ textarea.form-control-lg {
 
 .logo-epw {
   position: absolute;
-  width: 200px;
+  width: 100px;
 }
 
 #bg-404-error {
@@ -6901,7 +6901,7 @@ textarea.form-control-lg {
   height: 100%;
 }
 #bg-404-error .prev-404-construct {
-  padding-top: 200px;
+  padding-top: 30vh;
 }
 #bg-404-error .prev-404-construct .wrapper-image-text {
   display: flex;
@@ -6914,7 +6914,7 @@ textarea.form-control-lg {
 
 .on-404-text {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 5vh;
   font-size: 87px;
   font-weight: bold;
 }
@@ -6939,11 +6939,14 @@ textarea.form-control-lg {
 }
 .logo-epw {
   position: absolute;
-  width: 200px;
+  width: 100px;
+}
+
+.prev-comingsoon-construct {
+  padding-top: 30vh;
 }
 
 .wrapper-comingsoon-text {
-  margin-top: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6964,7 +6967,7 @@ textarea.form-control-lg {
     font-size: 60px;
   }
   .logo-epw {
-    width: 100px;
+    width: 90px;
   }
 }
 @media screen and (max-width: 576px) {

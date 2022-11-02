@@ -1,6 +1,6 @@
 .logo-epw {
     position: absolute;
-    width: 200px;
+    width: 100px;
 }
 #bg-404-error {
     // background-size: cover;
@@ -27,7 +27,7 @@
     );
     height: 100vh;
     .prev-404-construct {
-        padding-top: 200px;
+        padding-top: 30vh;
         .wrapper-image-text {
             display: flex;
             gap: 50px;
@@ -39,7 +39,7 @@
 }
 .on-404-text {
     width: 100%;
-    padding-top: 50px;
+    padding-top: 5vh;
     font-size: 87px;
     font-weight: bold;
 }
