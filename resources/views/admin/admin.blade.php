@@ -1,8 +1,10 @@
-@extends('layout.layout')
+@extends('layout.admin')
 @section('content')
-    <h1>Halo {{ auth()->user()->username }}</h1>
-    <form action="/logout" method="POST">
-        @csrf
-        <button class="btn btn-primary">Logout</button>
-    </form>
+    <div class="card">
+        <h5 class="card-header">Selamat Datang, di Admin Panel </h5>
+        <div class="card-body">
+            <h5 class="card-title">Admin panel mengurus berbagai hal administratif</h5>
+            <p class="card-text">Seperti pendataan peserta, pembuatan linktree, dll </p>
+        </div>
+    </div>
 @endsection

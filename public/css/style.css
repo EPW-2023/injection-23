@@ -6993,6 +6993,22 @@ textarea.form-control-lg {
   padding: 30px 50px 100px;
 }
 
+.admin-panel-announcement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }

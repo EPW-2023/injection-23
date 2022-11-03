@@ -42,7 +42,15 @@ Route::post('/logout', [AuthController::class, 'logout']);
 //Admin Panel
 Route::get('/admin-panel', function () {
     return view('admin.admin');
-})->middleware('auth');
+})
+    ->middleware('auth')
+    ->name('admin-panel');
+
+Route::prefix('admin-panel')->group(function () {
+    Route::get('/users', function () {
+        return view('success');
+    });
+});
 
 //Not an admin :v
 Route::get('/not-admin', function () {
