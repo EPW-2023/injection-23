@@ -6978,6 +6978,21 @@ textarea.form-control-lg {
     width: 80px;
   }
 }
+.table-linktree {
+  background: radial-gradient(111.58% 167.36% at 51.72% 126.13%, #C338FF 0%, #BC35FB 12%, #A72EEF 31%, #8622DD 53%, #5811C3 78%, #2B00A9 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-linktree .container-table {
+  width: 60%;
+}
+
+.card-create-link {
+  padding: 30px 50px 100px;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
