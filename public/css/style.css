@@ -7014,8 +7014,12 @@ textarea.form-control-lg {
 .bg-epc-registration .container-epc-boxes .box .container {
   width: 80%;
 }
-.bg-epc-registration .container-epc-boxes .box label {
+.bg-epc-registration .container-epc-boxes .box .nama-tim-label {
   font-size: 18px;
+  font-weight: bold;
+}
+.bg-epc-registration .container-epc-boxes .box .label-file {
+  font-size: 12px;
   font-weight: bold;
 }
 
