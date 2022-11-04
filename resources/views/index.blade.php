@@ -1,4 +1,5 @@
 @extends('layout.layout')
 @section('content')
-    <p class="text-center">testing lageeeeeeeee</p>
+    <p>oke mantap</p>
+    <p>testing aboutttttt</p>
 @endsection
