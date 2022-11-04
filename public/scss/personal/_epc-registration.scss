@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 80px;
   height: 100vh;
 
   .box {
@@ -32,19 +32,20 @@
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    backdrop-filter: blur(5px);
    border-radius: 20px;
-   width: 524px;
-   height: 713px;
+   width: 424px;
+   // padding-bottom: 50px;
+   height: 702px;
 
    .container {
     width: 80%;
    }
 
    .nama-tim-label {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
    }
    .label-file{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
    }
   }
