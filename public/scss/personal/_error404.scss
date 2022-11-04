@@ -2,47 +2,48 @@
     position: absolute;
     width: 100px;
 }
+
 #bg-404-error {
-    // background-size: cover;
-    // background-image: url("../../img/Group\ 131.png");
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-position: center center;
     .container-batik {
         width: 100%;
     }
+
     .batik {
         position: absolute;
         width: 100%;
         height: 100%;
     }
-    background: radial-gradient(
-        111.58% 167.36% at 51.72% 126.13%,
+
+    background: radial-gradient(111.58% 167.36% at 51.72% 126.13%,
         #c338ff 0%,
         #bc35fb 12%,
         #a72eef 31%,
         #8622dd 53%,
         #5811c3 78%,
-        #2b00a9 100%
-    );
+        #2b00a9 100%);
     height: 100vh;
+
     .prev-404-construct {
         padding-top: 30vh;
+
         .wrapper-image-text {
             display: flex;
             gap: 50px;
         }
     }
 }
+
 #bg-404-error {
     color: #ffff;
 }
+
 .on-404-text {
     width: 100%;
     padding-top: 5vh;
     font-size: 87px;
     font-weight: bold;
 }
+
 .on-404-paraf {
     font-size: 36px;
 }
@@ -52,12 +53,14 @@
     .wrapper-image-text {
         flex-direction: column-reverse;
     }
+
     .on-404-text {
         // padding-top: 50px;
         font-size: 40px;
         font-weight: bold;
         text-align: center;
     }
+
     .on-404-paraf {
         font-size: 18px;
         text-align: center;
