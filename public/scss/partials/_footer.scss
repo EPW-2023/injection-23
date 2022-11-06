@@ -1,0 +1,106 @@
+.footer-epw {
+ color: #fff;
+ font-family: $font-inter;
+ width: 60%;
+ // background-color: rgba(0, 0, 0, 0.3);
+ // height: 281px;
+ padding: 40px 30px;
+}
+
+.footer-logo-epw img {
+ vertical-align: middle;
+ width: 210px;
+}
+
+.flexbox-footer {
+ display: flex;
+ gap: 60px;
+}
+
+
+.contact-us-text {
+ font-weight: bold;
+ font-size: 40px;
+ text-decoration: underline;
+ margin: 0;
+}
+
+.flexbox-icon {
+ display: flex;
+ font-size: 25px;
+ gap: 30px;
+ font-weight: 500;
+}
+
+.icon-ig,
+.icon-tiktok,
+.icon-linkedin {
+ font-size: 40px;
+ vertical-align: middle;
+}
+
+.linkedin-text {
+ font-size: 25px;
+ font-weight: 500;
+}
+
+@media screen and (max-width: 1142px) {
+ .flexbox-icon {
+  display: flex;
+  font-size: 15px;
+  gap: 30px;
+  font-weight: 500;
+ }
+
+ .contact-us-text {
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: underline;
+  margin: 0;
+ }
+
+ .linkedin-text {
+  font-size: 15px;
+  font-weight: 500;
+ }
+
+ .icon-ig,
+ .icon-tiktok,
+ .icon-linkedin {
+  font-size: 20px;
+ }
+}
+
+
+@media screen and (max-width: 768px) {
+ .footer-logo-epw {
+  display: flex;
+  justify-content: center;
+
+  img {
+   width: 110px;
+  }
+ }
+
+ .flexbox-footer {
+  display: block;
+  gap: 60px;
+ }
+
+ .contact-us-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: underline;
+  margin: 0;
+ }
+
+ .flexbox-icon {
+  text-align: center;
+  display: block;
+ }
+
+ .linkedin-text {
+  text-align: center;
+ }
+}

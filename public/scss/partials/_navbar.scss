@@ -1,0 +1,75 @@
+.navbar-epw {
+ padding: 20px 20px;
+ font-family: $font-inter;
+}
+
+.nav-link-epw {
+ color: #ffff;
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.nav-link-epw:hover {
+ font-weight: 500;
+ color: #ffff;
+ text-decoration: underline;
+ text-decoration-thickness: 2px;
+}
+
+.nav-link-epw:focus {
+ color: #ffff;
+}
+
+.navbar-brand {
+ color: #ffff;
+ font-weight: bold;
+}
+
+.navbar-brand:hover {
+ color: #ffff;
+ font-weight: bold;
+}
+
+.navbar-brand:focus {
+ color: #ffff;
+ font-weight: bold;
+}
+
+.navbar-collapse-epw {
+ background-color: white;
+ color: black;
+ width: 100%;
+}
+
+.nav-text-black {
+ color: #000;
+}
+
+#button-modal {
+ display: none;
+}
+
+.link-modal {
+ color: #000;
+ transition: 0.3s;
+ border: 1px solid grey;
+ border-radius: 9px;
+ padding-top: 20px;
+ padding-bottom: 20px;
+}
+
+.link-modal:hover {
+ color: #fff;
+ background-color: #0d6efd;
+ border-radius: 9px;
+}
+
+@media screen and (max-width: 991px) {
+ #button-modal {
+  display: block;
+ }
+
+ #button-modal:focus {
+  border: none;
+ }
+}

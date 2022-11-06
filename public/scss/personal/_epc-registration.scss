@@ -1,0 +1,67 @@
+#bg-epc-registration {
+ font-family: $font-inter;
+ height: 100%;
+ padding-bottom: 10rem;
+
+
+ .container-batik {
+  width: 100%;
+ }
+
+ .batik {
+  position: absolute;
+  background-color: #20207B;
+  width: 100%;
+  z-index: -2;
+  object-fit: cover;
+ }
+
+ // height: 100vh;
+ color: #fff;
+
+ .container-form {
+  // background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  width: 60%;
+
+  .section-form {
+   font-weight: bold;
+   font-size: 20px;
+  }
+
+  .bio-header {
+   background-color: #000;
+   padding: 10px 20px;
+   font-weight: 400;
+   border-radius: 9px;
+  }
+
+  .box-pembayaran {
+   color: #000;
+   background-color: #fff;
+   max-height: 100%;
+   border-radius: 6px;
+   font-weight: 500;
+
+   .container {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    width: 80%;
+   }
+  }
+
+  .epc-submit-button {
+   padding: 5px 100px;
+  }
+ }
+}
+
+@media (max-width: 1178px) {
+ .batik{
+  display: none;
+ }
+ #bg-epc-registration{
+  background-color: #20207B;
+ }
+}

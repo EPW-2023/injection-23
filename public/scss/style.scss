@@ -54,6 +54,11 @@
 @import "personal/error404";
 @import "personal/comingsoon";
 @import "personal/epc-registration";
+@import "personal/fonts";
+
+//partials
+@import 'partials/navbar';
+@import 'partials/footer';
 
 // Utilities
 @import "utilities/api";

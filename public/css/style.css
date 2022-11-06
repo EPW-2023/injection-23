@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -7214,51 +7215,237 @@ textarea.form-control-lg {
     width: 80px;
   }
 }
-.bg-epc-registration {
+#bg-epc-registration {
   font-family: "Inter", sans-serif;
-  overflow: hidden;
-  background-color: #222588;
-  height: 100vh;
-}
-.bg-epc-registration .container-batik {
-  width: 100%;
-}
-.bg-epc-registration .batik {
-  position: absolute;
-  width: 100%;
   height: 100%;
+  padding-bottom: 10rem;
+  color: #fff;
 }
-.bg-epc-registration .container-epc-boxes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  height: 100vh;
+#bg-epc-registration .container-batik {
+  width: 100%;
 }
-.bg-epc-registration .container-epc-boxes .box {
-  color: #39145F;
-  background: rgba(255, 248, 248, 0.53);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
-  border-radius: 20px;
-  width: 424px;
-  height: 702px;
+#bg-epc-registration .batik {
+  position: absolute;
+  background-color: #20207B;
+  width: 100%;
+  z-index: -2;
+  object-fit: cover;
 }
-.bg-epc-registration .container-epc-boxes .box .data-tim-header {
-  font-size: 40px;
+#bg-epc-registration .container-form {
+  position: relative;
+  z-index: 1;
+  width: 60%;
 }
-.bg-epc-registration .container-epc-boxes .box .container {
+#bg-epc-registration .container-form .section-form {
+  font-weight: bold;
+  font-size: 20px;
+}
+#bg-epc-registration .container-form .bio-header {
+  background-color: #000;
+  padding: 10px 20px;
+  font-weight: 400;
+  border-radius: 9px;
+}
+#bg-epc-registration .container-form .box-pembayaran {
+  color: #000;
+  background-color: #fff;
+  max-height: 100%;
+  border-radius: 6px;
+  font-weight: 500;
+}
+#bg-epc-registration .container-form .box-pembayaran .container {
+  padding-top: 23px;
+  padding-bottom: 23px;
   width: 80%;
 }
-.bg-epc-registration .container-epc-boxes .box .nama-tim-label {
-  font-size: 15px;
-  font-weight: bold;
+#bg-epc-registration .container-form .epc-submit-button {
+  padding: 5px 100px;
 }
-.bg-epc-registration .container-epc-boxes .box .label-file {
-  font-size: 10px;
+
+@media (max-width: 1178px) {
+  .batik {
+    display: none;
+  }
+
+  #bg-epc-registration {
+    background-color: #20207B;
+  }
+}
+.navbar-epw {
+  padding: 20px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-link-epw {
+  color: #ffff;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav-link-epw:hover {
+  font-weight: 500;
+  color: #ffff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.nav-link-epw:focus {
+  color: #ffff;
+}
+
+.navbar-brand {
+  color: #ffff;
   font-weight: bold;
 }
 
+.navbar-brand:hover {
+  color: #ffff;
+  font-weight: bold;
+}
+
+.navbar-brand:focus {
+  color: #ffff;
+  font-weight: bold;
+}
+
+.navbar-collapse-epw {
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+.nav-text-black {
+  color: #000;
+}
+
+#button-modal {
+  display: none;
+}
+
+.link-modal {
+  color: #000;
+  transition: 0.3s;
+  border: 1px solid grey;
+  border-radius: 9px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.link-modal:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 991px) {
+  #button-modal {
+    display: block;
+  }
+
+  #button-modal:focus {
+    border: none;
+  }
+}
+.footer-epw {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  width: 60%;
+  padding: 40px 30px;
+}
+
+.footer-logo-epw img {
+  vertical-align: middle;
+  width: 210px;
+}
+
+.flexbox-footer {
+  display: flex;
+  gap: 60px;
+}
+
+.contact-us-text {
+  font-weight: bold;
+  font-size: 40px;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.flexbox-icon {
+  display: flex;
+  font-size: 25px;
+  gap: 30px;
+  font-weight: 500;
+}
+
+.icon-ig,
+.icon-tiktok,
+.icon-linkedin {
+  font-size: 40px;
+  vertical-align: middle;
+}
+
+.linkedin-text {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1142px) {
+  .flexbox-icon {
+    display: flex;
+    font-size: 15px;
+    gap: 30px;
+    font-weight: 500;
+  }
+
+  .contact-us-text {
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+    margin: 0;
+  }
+
+  .linkedin-text {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .icon-ig,
+.icon-tiktok,
+.icon-linkedin {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-logo-epw {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-logo-epw img {
+    width: 110px;
+  }
+
+  .flexbox-footer {
+    display: block;
+    gap: 60px;
+  }
+
+  .contact-us-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+    margin: 0;
+  }
+
+  .flexbox-icon {
+    text-align: center;
+    display: block;
+  }
+
+  .linkedin-text {
+    text-align: center;
+  }
+}
 .align-baseline {
   vertical-align: baseline !important;
 }
