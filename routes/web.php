@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicantController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,10 +23,16 @@ Route::get('/help', function () {
 Route::get('/coming-soon', function () {
     return view('errors.comingsoon');
 })->name('coming-soon');
-Route::get('/register', function(){
-    return view('epc.registration');
-});
 
-Route::get('/admin-panel', function(){
+Route::get('/admin-panel', function () {
     return view('admin.index');
 });
+
+//success
+Route::get('/success', function () {
+    return view('success');
+});
+
+//Registration to Applicants
+Route::get('/register', [ApplicantController::class, 'index']);
+Route::post('/register', [ApplicantController::class, 'store']);

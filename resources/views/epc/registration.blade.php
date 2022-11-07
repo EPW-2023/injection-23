@@ -1,13 +1,14 @@
 @extends('layout.layout')
 @section('content')
-    <form action="/register" method="POST">
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        @csrf
         <div id="bg-epc-registration">
             <div class="container-batik"><img src="{{ asset('img/batik-panjang.png') }}" class="batik img-fluid"></div>
             @include('partials.navbar')
             <div class="container mt-3">
                 <div class="container container-form">
                     <div class="d-flex justify-content-center mb-4">
-                        <img src="{{ asset('img/epc-header.png') }}" class="img-fluid" alt="lambang EPC 2023"   >
+                        <img src="{{ asset('img/epc-header.png') }}" class="img-fluid" alt="lambang EPC 2023">
                     </div>
                     <h1 class="text-center fst-italic">Registration</h1>
                     <div class="body-form mt-3">
@@ -17,27 +18,31 @@
                                 <label for="namatim" class="form-label">
                                     Nama Tim
                                 </label>
-                                <input required type="text" class="form-control" id="namatim" name="namatim" placeholder="Nama Tim">
+                                <input required type="text" class="form-control" id="namatim" name="namatim"
+                                    placeholder="Nama Tim">
                             </div>
                             <div class="col-md-6">
                                 <label for="password" class="form-label">
                                     Password
                                 </label>
-                                <input required type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                <input required type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="usernametim" class="form-label">
+                                <label for="username" class="form-label">
                                     Username Tim
                                 </label>
-                                <input required type="text" class="form-control" id="usernametim" name="usernametim" placeholder="Username Tim">
+                                <input required type="text" class="form-control" id="usernametim" name="username"
+                                    placeholder="Username Tim">
                             </div>
                             <div class="col-md-6">
                                 <label for="confpassword" class="form-label">
                                     Confirm Password
                                 </label>
-                                <input required type="password" class="form-control" id="confpassword" name="confpassword" placeholder="Confirm Password">
+                                <input required type="password" class="form-control" id="confpassword" name="confpassword"
+                                    placeholder="Confirm Password">
                             </div>
                         </div>
                         <div class="my-4"></div>
@@ -47,13 +52,15 @@
                                 <label for="asalsekolah" class="form-label">
                                     Asal Sekolah
                                 </label>
-                                <input required type="text" class="form-control" id="asalsekolah" name="asalsekolah" placeholder="Asal Sekolah">
+                                <input required type="text" class="form-control" id="asalsekolah" name="asalsekolah"
+                                    placeholder="Asal Sekolah">
                             </div>
                             <div class="col-md-6">
                                 <label for="kota" class="form-label">
                                     Kota
                                 </label>
-                                <input required type="text" class="form-control" id="kota" name="kota" placeholder="Kota">
+                                <input required type="text" class="form-control" id="kota" name="kota"
+                                    placeholder="Kota">
                             </div>
                         </div>
                         <div class="my-4"></div>
@@ -64,13 +71,15 @@
                                 <label for="nama_ketua" class="form-label">
                                     Nama Ketua
                                 </label>
-                                <input required type="text" class="form-control" id="nama_ketua" name="nama_ketua" placeholder="Nama Ketua">
+                                <input required type="text" class="form-control" id="nama_ketua" name="nama_ketua"
+                                    placeholder="Nama Ketua">
                             </div>
                             <div class="col-md-6">
                                 <label for="nisn_ketua" class="form-label">
                                     NISN Ketua
                                 </label>
-                                <input required type="text" class="form-control" id="nisn_ketua" name="nisn_ketua" placeholder="NISN Ketua">
+                                <input required type="text" class="form-control" id="nisn_ketua" name="nisn_ketua"
+                                    placeholder="NISN Ketua">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -78,13 +87,15 @@
                                 <label for="nohp_ketua" class="form-label">
                                     No. HP
                                 </label>
-                                <input required type="text" class="form-control" id="nohp_ketua" name="nohp_ketua" placeholder="No HP">
+                                <input required type="text" class="form-control" id="nohp_ketua" name="nohp_ketua"
+                                    placeholder="No HP">
                             </div>
                             <div class="col-md-6">
                                 <label for="email_ketua" class="form-label">
                                     Email
                                 </label>
-                                <input required type="email" class="form-control" id="email_ketua" name="email_ketua" placeholder="Email">
+                                <input required type="email" class="form-control" id="email_ketua" name="email_ketua"
+                                    placeholder="Email">
                             </div>
                         </div>
                         {{-- End of Ketua --}}
