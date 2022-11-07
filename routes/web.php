@@ -25,3 +25,7 @@ Route::get('/coming-soon', function () {
 Route::get('/register', function(){
     return view('epc.registration');
 });
+
+Route::get('/admin-panel', function(){
+    return view('admin.index');
+});
