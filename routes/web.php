@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ApplicantBioController;
 use App\Http\Controllers\ApplicantController;
+use App\Http\Controllers\ApplicantFileController;
 use Illuminate\Support\Facades\Route;
 
 /*
