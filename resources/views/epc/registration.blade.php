@@ -3,7 +3,7 @@
     <form action="/register" method="POST" enctype="multipart/form-data">
         @csrf
         <div id="bg-epc-registration">
-            {{-- <div class="container-batik"><img src="{{ asset('img/batik-panjang.png') }}" class="batik img-fluid"></div> --}}
+            <div class="container-batik"><img src="{{ asset('img/batik-panjang.png') }}" class="batik img-fluid"></div>
             @include('partials.navbar')
             <div class="container mt-3">
                 <div class="container container-form">
