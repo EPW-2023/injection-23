@@ -7216,6 +7216,7 @@ textarea.form-control-lg {
   }
 }
 #bg-epc-registration {
+  background-color: #20207B;
   font-family: "Inter", sans-serif;
   height: 100%;
   padding-bottom: 10rem;
@@ -7265,10 +7266,6 @@ textarea.form-control-lg {
 @media (max-width: 1178px) {
   .batik {
     display: none;
-  }
-
-  #bg-epc-registration {
-    background-color: #20207B;
   }
 }
 .navbar-epw {
