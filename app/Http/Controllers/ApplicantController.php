@@ -128,6 +128,5 @@ class ApplicantController extends Controller
         Applicant::create($applicantsData);
 
         return redirect('/success');
-        echo $nama_foto_ketua;
     }
 }
