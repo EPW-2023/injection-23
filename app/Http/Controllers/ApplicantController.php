@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Applicant;
-use App\Models\ApplicantBio;
-use App\Models\ApplicantFile;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -50,7 +49,7 @@ class ApplicantController extends Controller
             'foto ketua' .
             '.' .
             $foto_ketua->getClientOriginalExtension();
-        $tujuan_foto_ketua = 'files/' . $applicantsData['namatim'];
+        $tujuan_foto_ketua = 'storage/' . $applicantsData['namatim'];
         $foto_ketua->move($tujuan_foto_ketua, $nama_foto_ketua);
 
         //foto anggota 1
@@ -61,7 +60,7 @@ class ApplicantController extends Controller
             'foto anggota1' .
             '.' .
             $foto_anggota1->getClientOriginalExtension();
-        $tujuan_foto_anggota1 = 'files/' . $applicantsData['namatim'];
+        $tujuan_foto_anggota1 = 'storage/' . $applicantsData['namatim'];
         $foto_anggota1->move($tujuan_foto_anggota1, $nama_foto_anggota1);
 
         //kartu pelajar ketua
@@ -72,7 +71,7 @@ class ApplicantController extends Controller
             'kartu pelajar ketua' .
             '.' .
             $kartu_pelajar_ketua->getClientOriginalExtension();
-        $tujuan_kartu_pelajar_ketua = 'files/' . $applicantsData['namatim'];
+        $tujuan_kartu_pelajar_ketua = 'storage/' . $applicantsData['namatim'];
         $kartu_pelajar_ketua->move(
             $tujuan_kartu_pelajar_ketua,
             $nama_kartu_pelajar_ketua
@@ -86,7 +85,8 @@ class ApplicantController extends Controller
             'kartu pelajar anggota1' .
             '.' .
             $kartu_pelajar_anggota1->getClientOriginalExtension();
-        $tujuan_kartu_pelajar_anggota1 = 'files/' . $applicantsData['namatim'];
+        $tujuan_kartu_pelajar_anggota1 =
+            'storage/' . $applicantsData['namatim'];
         $kartu_pelajar_anggota1->move(
             $tujuan_kartu_pelajar_anggota1,
             $nama_kartu_pelajar_anggota1
@@ -99,7 +99,7 @@ class ApplicantController extends Controller
             'bukti pembayaran' .
             '.' .
             $bukti_pembayaran->getClientOriginalExtension();
-        $tujuan_bukti_pembayaran = 'files/' . $applicantsData['namatim'];
+        $tujuan_bukti_pembayaran = 'storage/' . $applicantsData['namatim'];
         $bukti_pembayaran->move(
             $tujuan_bukti_pembayaran,
             $nama_bukti_pembayaran
@@ -126,6 +126,10 @@ class ApplicantController extends Controller
         // dd($applicantsData);
 
         Applicant::create($applicantsData);
+        User::create([
+            'username' => $applicantsData['username'],
+            'password' => $applicantsData['password'],
+        ]);
 
         return redirect('/success');
     }
