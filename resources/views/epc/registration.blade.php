@@ -161,7 +161,9 @@
                         <div class="section-form mb-3">4. Pembayaran</div>
                         <div class="box-pembayaran d-flex justify-content-center mb-3">
                             <div class="container">
-                                <p>Peserta membayar uang pendaftaran sebesar Rp 95.001 per tim melalui:
+                                <p>Peserta membayar uang pendaftaran sebesar Rp @foreach ($registration_fee as $item)
+                                        {{ $item->registration_fee }}
+                                    @endforeach per tim melalui:
                                     (Jangan lupa menambahkan angka 1 di akhir nominal pendaftaran!)</p>
                                 <ul>
                                     <li>

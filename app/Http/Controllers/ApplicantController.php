@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Applicant;
+use App\Models\RegistrationFee;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -13,7 +14,9 @@ class ApplicantController extends Controller
     public function index()
     {
         //display the registration page
-        return view('epc.registration');
+        return view('epc.registration', [
+            'registration_fee' => RegistrationFee::all(),
+        ]);
     }
 
     public function store(Request $request)
@@ -105,14 +108,6 @@ class ApplicantController extends Controller
             $nama_bukti_pembayaran
         );
 
-        // $applicantFileData = [
-        //     'foto_ketua' => $nama_foto_ketua,
-        //     'foto_anggota1' => $nama_foto_anggota1,
-        //     'kartu_pelajar_ketua' => $nama_kartu_pelajar_ketua,
-        //     'kartu_pelajar_anggota1' => $nama_kartu_pelajar_anggota1,
-        //     'bukti_pembayaran' => $nama_bukti_pembayaran,
-        //     'nama_pemilik_rekening' => $request->nama_pemilik_rekening,
-        // ];
         $applicantFileData['foto_ketua'] = $nama_foto_ketua;
         $applicantFileData['foto_anggota1'] = $nama_foto_anggota1;
         $applicantFileData['kartu_pelajar_ketua'] = $nama_kartu_pelajar_ketua;
@@ -122,8 +117,6 @@ class ApplicantController extends Controller
         $applicantFileData['bukti_pembayaran'] = $nama_bukti_pembayaran;
         $applicantFileData['nama_pemilik_rekening'] =
             $request->nama_pemilik_rekening;
-
-        // dd($applicantsData);
 
         Applicant::create($applicantsData);
         User::create([

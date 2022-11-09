@@ -5,19 +5,27 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('registration_fees', function (Blueprint $table) {
             $table->id();
-            $table->string('username')->unique();
-            $table->string('password');
-            $table->enum('role', ['Dev', 'Admin', 'Guest'])->default('Guest');
-            $table->rememberToken();
             $table->timestamps();
+            $table->string('registration_fee');
         });
     }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('registration_fees');
     }
 };

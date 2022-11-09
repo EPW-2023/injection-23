@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\ApplicantBioController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApplicantController;
-use App\Http\Controllers\ApplicantFileController;
+use App\Http\Controllers\RegistrationFeeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,10 +26,6 @@ Route::get('/coming-soon', function () {
     return view('errors.comingsoon');
 })->name('coming-soon');
 
-Route::get('/admin-panel', function () {
-    return view('admin.index');
-});
-
 //success
 Route::get('/success', function () {
     return view('success');
@@ -38,3 +34,18 @@ Route::get('/success', function () {
 //Registration to Applicants
 Route::get('/register', [ApplicantController::class, 'index']);
 Route::post('/register', [ApplicantController::class, 'store']);
+
+//Admin
+Route::prefix('admin')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->name('admin-index');
+    Route::get('/user', [AdminController::class, 'userIndex'])->name(
+        'admin-user'
+    );
+    Route::get('/applicant', [AdminController::class, 'applicantIndex'])->name(
+        'admin-applicant'
+    );
+    Route::get('/team', [AdminController::class, 'teamIndex'])->name(
+        'admin-team'
+    );
+    Route::resource('/registration-fee', RegistrationFeeController::class);
+});
