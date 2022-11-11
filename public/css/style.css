@@ -7266,7 +7266,21 @@ textarea.form-control-lg {
   .batik {
     display: none;
   }
+
+  #bg-epc-registration {
+    background-color: #20207B;
+  }
 }
+.bg-login {
+  background-color: #e5e7eb;
+  height: 100vh;
+}
+
+.login-card {
+  margin-top: 25vh;
+  padding: 25px 50px;
+}
+
 .navbar-epw {
   padding: 20px 20px;
   font-family: "Inter", sans-serif;

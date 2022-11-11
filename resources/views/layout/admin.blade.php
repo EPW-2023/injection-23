@@ -10,6 +10,8 @@
     <title>EPW 2023 | Admin Panel</title>
     <!-- Custom fonts for this template-->
     <link href="{{ asset('css/fontawesome/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -57,10 +59,22 @@
                     <span>Registration Fee</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link " href="{{ route('admin-user') }}">
-                    <span>Users</span>
-                </a>
+            @if (auth()->user()->role == 'Dev')
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('admin-user') }}">
+                        <span>Users</span>
+                    </a>
+                </li>
+            @endif
+            <li class="nav-item mt-auto">
+                <div class="d-flex justify-content-center">
+                    <form action="{{ route('admin-logout') }}" method="POST">
+                        @csrf
+                        <button class="btn btn-danger" type="submit">
+                            <i class="fa-solid fa-power-off"></i> Logout
+                        </button>
+                    </form>
+                </div>
             </li>
         </ul>
         <!-- End of Sidebar -->
@@ -130,7 +144,8 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
