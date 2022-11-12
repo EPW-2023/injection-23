@@ -55,4 +55,5 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
 });
 Route::get('/admin-login', [AuthController::class, 'index'])->name('login');
 Route::post('/admin-login', [AuthController::class, 'authenticate']);
+Route::get('/admin-registration', []);
 Route::post('/logout', [AuthController::class, 'logout'])->name('admin-logout');

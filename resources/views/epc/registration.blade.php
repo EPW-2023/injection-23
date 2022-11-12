@@ -8,7 +8,7 @@
             <div class="container mt-3">
                 <div class="container container-form">
                     <div class="d-flex justify-content-center mb-4">
-                        <img src="{{ asset('img/epc-header.png') }}" class="img-fluid" alt="lambang EPC 2023">
+                        <img src="{{ asset('img/injection-header.png') }}" class="img-fluid" alt="lambang EPC 2023">
                     </div>
                     <h1 class="text-center fst-italic">Registration</h1>
                     <div class="body-form mt-3">
@@ -119,9 +119,39 @@
                             </div>
                         </div>
                         {{-- End of Anggota 1 --}}
-
+                        {{-- Anggota 2 --}}
+                        <div class="section-form mt-4 mb-3 bio-header d-flex justify-content-between">
+                            <div>Anggota 2</div>
+                            <div data-bs-toggle="collapse" data-bs-target="#anggota2" aria-expanded="false"
+                                aria-controls="anggota2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="collapse" id="anggota2">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="nama_anggota2" class="form-label">Nama Anggota 2</label>
+                                        <input type="text" class="form-control" name="nama_anggota2"
+                                            id="nama_anggota2" placeholder="Nama Anggota 2">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="nisn_anggota2" class="form-label">NISN</label>
+                                        <input type="text" class="form-control" name="nisn_anggota2"
+                                            id="nisn_anggota2" placeholder="NISN">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- End of Anggota 2 --}}
                         {{-- Berkas --}}
-                        <div class="section-form mb-3">3. Dokumen Pendukung</div>
+                        <div class="section-form mt-2 mb-3">3. Dokumen Pendukung</div>
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="upload_pas_foto" class="form-label fs-5 d-block">
