@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\RegistrationFeeController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,10 +51,43 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
         Route::get('/team', [AdminController::class, 'teamIndex'])->name(
             'admin-team'
         );
+        //ROUTE BUAT UBAH-UBAH REGISTRATION FEE
         Route::resource('/registration-fee', RegistrationFeeController::class);
+        Route::get('/uploaded-files', [
+            DownloadController::class,
+            'index',
+        ])->name('uploaded-file');
+        //ROUTE BUAT DOWNLOAD FILE2 
+        Route::get('/download-foto-ketua/{applicant:id}', [
+            DownloadController::class,
+            'downloadFotoKetua',
+        ]);
+        Route::get('/download-foto-anggota1/{applicant:id}', [
+            DownloadController::class,
+            'downloadFotoAnggota1',
+        ]);
+        Route::get('/download-foto-anggota2/{applicant:id}', [
+            DownloadController::class,
+            'downloadFotoAnggota2',
+        ]);
+        Route::get('/download-kartu-pelajar-ketua/{applicant:id}', [
+            DownloadController::class,
+            'downloadKartuPelajarKetua',
+        ]);
+        Route::get('/download-kartu-pelajar-anggota1/{applicant:id}', [
+            DownloadController::class,
+            'downloadKartuPelajarAnggota1',
+        ]);
+        Route::get('/download-kartu-pelajar-anggota2/{applicant:id}', [
+            DownloadController::class,
+            'downloadKartuPelajarAnggota2',
+        ]);
+        Route::get('/download-bukti-pembayaran/{applicant:id}', [
+            DownloadController::class,
+            'downloadBuktiPembayaran',
+        ]);
     });
 });
 Route::get('/admin-login', [AuthController::class, 'index'])->name('login');
 Route::post('/admin-login', [AuthController::class, 'authenticate']);
-Route::get('/admin-registration', []);
 Route::post('/logout', [AuthController::class, 'logout'])->name('admin-logout');

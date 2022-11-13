@@ -161,8 +161,11 @@
                                 <input required type="file" class="form-control mb-3" id="foto_ketua"
                                     name="foto_ketua">
                                 <label for="foto_anggota1" class="form-label">Anggota 1</label>
-                                <input required type="file" class="form-control" id="foto_anggota1"
+                                <input required type="file" class="form-control mb-3" id="foto_anggota1"
                                     name="foto_anggota1">
+                                <label for="foto_anggota2" class="form-label">Anggota 2</label>
+                                <input required type="file" class="form-control" id="foto_anggota2"
+                                    name="foto_anggota2">
                                 <div class="small">
                                     <label class="form-label mt-2 d-block">Format Penamaan :
                                         pasfoto_[posisi]_[nama]</label>
@@ -177,8 +180,11 @@
                                 <input required type="file" class="form-control mb-3" id="kartu_pelajar_ketua"
                                     name="kartu_pelajar_ketua">
                                 <label for="kartu_pelajar_anggota1" class="form-label">Anggota 1</label>
-                                <input required type="file" class="form-control" id="kartu_pelajar_anggota1"
+                                <input required type="file" class="form-control mb-3" id="kartu_pelajar_anggota1"
                                     name="kartu_pelajar_anggota1">
+                                <label for="kartu_pelajar_anggota2" class="form-label">Anggota 2</label>
+                                <input required type="file" class="form-control" id="kartu_pelajar_anggota2"
+                                    name="kartu_pelajar_anggota2">
                                 <div class="small">
                                     <label class="form-label mt-2 d-block">Format Penamaan :
                                         kartupelajar_[posisi]_[nama]</label>
@@ -198,14 +204,6 @@
                                 <ul>
                                     <li>
                                         <p><b>BSI</b> : 1059379220 a.n Dhea Tirta
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p><b>BRI</b> : 0212-01-052658-50-1 a.n Nelva Citra Saini
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p><b>OVO</b> : 082157156299 a.n Nelva Citra Saini
                                         </p>
                                     </li>
                                 </ul>

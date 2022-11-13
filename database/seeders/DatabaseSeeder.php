@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\RegistrationFee;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +23,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        User::create([
+            'username' => 'dev',
+            'password' =>
+                '$2a$12$5G3XhJdXbRQHKmoYmusjUeQhu/HQjaeQCfW4xoxRRjo.fjhGvlb9O',
+            'role' => 'Dev',
+        ]);
+        RegistrationFee::create([
+            'registration_fee' => '75.001',
+        ]);
     }
 }

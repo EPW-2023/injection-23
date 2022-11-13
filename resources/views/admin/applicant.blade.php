@@ -1,7 +1,7 @@
 @extends('layout.admin')
 @section('admin')
     <h1>Applicant</h1>
-    <table class="table table-bordered" style="width: 90%">
+    <table class="table table-bordered" style="width: 90%;">
         <thead>
             <tr>
                 <th scope="col">Nama Tim</th>

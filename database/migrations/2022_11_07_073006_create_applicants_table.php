@@ -26,12 +26,16 @@ return new class extends Migration {
             $table->string('email_ketua');
             $table->string('nama_anggota1');
             $table->string('nisn_anggota1');
-            // $table->string('foto_ketua');
-            // $table->string('foto_anggota1');
-            // $table->string('kartu_pelajar_ketua');
-            // $table->string('kartu_pelajar_anggota1');
+            $table->string('nama_anggota2')->nullable();
+            $table->string('nisn_anggota2')->nullable();
+            $table->string('foto_ketua');
+            $table->string('foto_anggota1')->nullable();
+            $table->string('foto_anggota2')->nullable();
+            $table->string('kartu_pelajar_ketua');
+            $table->string('kartu_pelajar_anggota1');
+            $table->string('kartu_pelajar_anggota2');
             $table->string('nama_pemilik_rekening');
-            // $table->string('bukti_pembayaran');
+            $table->string('bukti_pembayaran');
         });
     }
 

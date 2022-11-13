@@ -41,7 +41,7 @@
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
-                Engineering Physics Challenge (EPC 2023)
+                SCIENCE PROJECT AND INNOVATION (INJECTION 2023)
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -52,6 +52,11 @@
             <li class="nav-item">
                 <a class="nav-link " href="{{ route('admin-team') }}"">
                     <span>Teams</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="{{ route('uploaded-file') }}">
+                    <span>Uploaded Files</span>
                 </a>
             </li>
             <li class="nav-item">
