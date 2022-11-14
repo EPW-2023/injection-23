@@ -14,7 +14,8 @@ class ApplicantController extends Controller
     public function index()
     {
         //display the registration page
-        return view('epc.registration', [
+        return view('injection.registration', [
+            'title' => 'INJECTION Registration',
             'registration_fee' => RegistrationFee::all(),
         ]);
     }

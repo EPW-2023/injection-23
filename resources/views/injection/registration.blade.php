@@ -144,7 +144,7 @@
                                     <div class="mb-2">
                                         <label for="nisn_anggota2" class="form-label">NISN</label>
                                         <input type="text" class="form-control" name="nisn_anggota2"
-                                            id="nisn_anggota2" placeholder="NISN">
+                                            id="nisn_anggota2" placeholder="NISN Anggota 2">
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +203,11 @@
                                     (Jangan lupa menambahkan angka 1 di akhir nominal pendaftaran!)</p>
                                 <ul>
                                     <li>
-                                        <p><b>BSI</b> : 1059379220 a.n Dhea Tirta
+                                        <p><b>BRI</b> : 645701015708531 a.n. Agun Widya Pratiwi
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><b>MANDIRI </b> : 1400021339495 a.n. Agun Widya Pratiwi
                                         </p>
                                     </li>
                                 </ul>

@@ -19,18 +19,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('/coming-soon');
+    return redirect('/register');
 });
 Route::get('/help', function () {
     return view('help');
 });
 Route::get('/coming-soon', function () {
-    return view('errors.comingsoon');
+    return view('errors.comingsoon', [
+        'title' => 'COMING SOON',
+    ]);
 })->name('coming-soon');
 
 //success
 Route::get('/success', function () {
-    return view('success');
+    return view('success', [
+        'title' => 'SUCCESS',
+    ]);
 });
 
 //Registration to Applicants
@@ -57,7 +61,7 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
             DownloadController::class,
             'index',
         ])->name('uploaded-file');
-        //ROUTE BUAT DOWNLOAD FILE2 
+        //ROUTE BUAT DOWNLOAD FILE2
         Route::get('/download-foto-ketua/{applicant:id}', [
             DownloadController::class,
             'downloadFotoKetua',
@@ -91,3 +95,21 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
 Route::get('/admin-login', [AuthController::class, 'index'])->name('login');
 Route::post('/admin-login', [AuthController::class, 'authenticate']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('admin-logout');
+
+//ROUTE DASHBOARD
+Route::get('/dashboard', function () {
+    return redirect(route('not-verified'));
+});
+
+//ROUTE NOT VERIFIED YET!
+Route::get('/not-verified', function () {
+    return view('notverified', [
+        'title' => 'Account Not Verified',
+    ]);
+})->name('not-verified');
+
+Route::fallback(function () {
+    return view('errors.404', [
+        'title' => '404 Not Found',
+    ]);
+});

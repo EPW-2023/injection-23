@@ -1,7 +1,7 @@
 @extends('layout.admin')
 @section('admin')
     <h1>Teams</h1>
-    <table class="table table-bordered" style="width: 50%">
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th scope="col">Username</th>
