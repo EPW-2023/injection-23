@@ -41,6 +41,28 @@ Route::get('/success', function () {
 Route::get('/register', [ApplicantController::class, 'index']);
 Route::post('/register', [ApplicantController::class, 'store']);
 
+// Login to Applicants
+Route::get('/login', [ApplicantController::class, 'indexLogin'])->name('login');
+Route::post('/login', [ApplicantController::class, 'applicantAuth']);
+Route::post('applicant-logout', [
+    ApplicantController::class,
+    'applicantLogout',
+])->name('applicant-logout');
+
+//ROUTE DASHBOARD
+Route::get('/dashboard', function () {
+    return view('injection.dashboard', [
+        'title' => 'INJECTION Dashboard',
+    ]);
+})->middleware('auth');
+
+//ROUTE NOT VERIFIED YET!
+Route::get('/not-verified', function () {
+    return view('injection.notverified', [
+        'title' => 'Account Not Verified',
+    ]);
+})->name('not-verified');
+
 //Admin
 Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
     Route::prefix('admin')->group(function () {
@@ -92,22 +114,11 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
         ]);
     });
 });
-Route::get('/admin-login', [AuthController::class, 'index'])->name('login');
+Route::get('/admin-login', [AuthController::class, 'index'])->name(
+    'admin-login'
+);
 Route::post('/admin-login', [AuthController::class, 'authenticate']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('admin-logout');
-
-//ROUTE DASHBOARD
-Route::get('/dashboard', function () {
-    return redirect(route('not-verified'));
-});
-
-//ROUTE NOT VERIFIED YET!
-Route::get('/not-verified', function () {
-    return view('notverified', [
-        'title' => 'Account Not Verified',
-    ]);
-})->name('not-verified');
-
 Route::fallback(function () {
     return view('errors.404', [
         'title' => '404 Not Found',

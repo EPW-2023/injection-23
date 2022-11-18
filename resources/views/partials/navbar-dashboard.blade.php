@@ -11,9 +11,20 @@
                 <li class="nav-item">
                     <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">DASHBOARD</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">LOGIN</a>
-                </li>
+                @guest()
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">LOGIN</a>
+                    </li>
+                @endguest
+                @auth()
+                    <li class="nav-item">
+                        <form action="{{ route('applicant-logout') }}" method="post">
+                            @csrf
+                            <button class="nav-link nav-link-epw bg-transparent applicant-logout-button"
+                                id="nav-link-epw">LOGOUT</button>
+                        </form>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>

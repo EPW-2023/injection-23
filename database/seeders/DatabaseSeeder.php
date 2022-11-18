@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         User::create([
+            'namatim' => 'anonymous',
             'username' => 'dev',
             'password' =>
                 '$2a$12$5G3XhJdXbRQHKmoYmusjUeQhu/HQjaeQCfW4xoxRRjo.fjhGvlb9O',
