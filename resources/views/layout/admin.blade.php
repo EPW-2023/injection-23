@@ -25,10 +25,10 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #ef4444">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #0ea5e9">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin-index') }}">
-                <div class="sidebar-brand-text mx-3">EPW 2023</div>
+                <div class="sidebar-brand-text mx-3">INJECTION 2023</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -65,9 +65,12 @@
                 </a>
             </li>
             @if (auth()->user()->role == 'Dev')
+                <div class="sidebar-heading">
+                    Developer Feature Only
+                </div>
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('admin-user') }}">
-                        <span>Users</span>
+                        <span>Create New Users</span>
                     </a>
                 </li>
             @endif

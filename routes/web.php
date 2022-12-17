@@ -63,13 +63,22 @@ Route::get('/not-verified', function () {
     ]);
 })->name('not-verified');
 
+//DEV ONLY
+Route::middleware(['auth', 'role:Dev'])->group(function () {
+    Route::prefix('admin')->group(function () {
+        Route::get('/user', [AdminController::class, 'userIndex'])->name(
+            'admin-user'
+        );
+        Route::post('/user', [AdminController::class, 'newAdminPost'])->name(
+            'create-admin'
+        );
+    });
+});
+
 //Admin
 Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/', [AdminController::class, 'index'])->name('admin-index');
-        Route::get('/user', [AdminController::class, 'userIndex'])->name(
-            'admin-user'
-        );
         Route::get('/applicant', [
             AdminController::class,
             'applicantIndex',
