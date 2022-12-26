@@ -75,12 +75,16 @@ class ApplicantController extends Controller
             'nisn_anggota2' => ['nullable'],
             'foto_ketua' => ['required'], //file
             'foto_anggota1' => ['required'], //file
+            'foto_anggota2' => ['nullable'], //file
             'kartu_pelajar_ketua' => ['required'], //file
             'kartu_pelajar_anggota1' => ['required'], //file
+            'kartu_pelajar_anggota2' => ['nullable'], //file
             'nama_pemilik_rekening' => ['required'],
             'bukti_pembayaran' => ['required'], //file
         ]);
         $applicantsData['password'] = Hash::make($applicantsData['password']);
+
+        // dd($applicantsData);
 
         //per file an duniawi
 
@@ -105,17 +109,6 @@ class ApplicantController extends Controller
             $foto_anggota1->getClientOriginalExtension();
         $tujuan_foto_anggota1 = 'storage/' . $applicantsData['namatim'];
         $foto_anggota1->move($tujuan_foto_anggota1, $nama_foto_anggota1);
-
-        //foto anggota 2
-        $foto_anggota2 = $request->file('foto_anggota2');
-        $nama_foto_anggota2 =
-            $applicantsData['namatim'] .
-            ' ' .
-            'foto anggota2' .
-            '.' .
-            $foto_anggota2->getClientOriginalExtension();
-        $tujuan_foto_anggota2 = 'storage/' . $applicantsData['namatim'];
-        $foto_anggota2->move($tujuan_foto_anggota2, $nama_foto_anggota2);
 
         //kartu pelajar ketua
         $kartu_pelajar_ketua = $request->file('kartu_pelajar_ketua');
@@ -146,20 +139,35 @@ class ApplicantController extends Controller
             $nama_kartu_pelajar_anggota1
         );
 
-        //kartu pelajar anggota 2
-        $kartu_pelajar_anggota2 = $request->file('kartu_pelajar_anggota2');
-        $nama_kartu_pelajar_anggota2 =
-            $applicantsData['namatim'] .
-            ' ' .
-            'kartu pelajar anggota2' .
-            '.' .
-            $kartu_pelajar_anggota2->getClientOriginalExtension();
-        $tujuan_kartu_pelajar_anggota2 =
-            'storage/' . $applicantsData['namatim'];
-        $kartu_pelajar_anggota2->move(
-            $tujuan_kartu_pelajar_anggota2,
-            $nama_kartu_pelajar_anggota2
-        );
+        //ANGGOTA 2 ITU OPSIONAL
+
+        if (isset($applicantsData['nama_anggota2'])) {
+            //foto anggota 2
+            $foto_anggota2 = $request->file('foto_anggota2');
+            $nama_foto_anggota2 =
+                $applicantsData['namatim'] .
+                ' ' .
+                'foto anggota2' .
+                '.' .
+                $foto_anggota2->getClientOriginalExtension();
+            $tujuan_foto_anggota2 = 'storage/' . $applicantsData['namatim'];
+            $foto_anggota2->move($tujuan_foto_anggota2, $nama_foto_anggota2);
+
+            //kartu pelajar anggota 2
+            $kartu_pelajar_anggota2 = $request->file('kartu_pelajar_anggota2');
+            $nama_kartu_pelajar_anggota2 =
+                $applicantsData['namatim'] .
+                ' ' .
+                'kartu pelajar anggota2' .
+                '.' .
+                $kartu_pelajar_anggota2->getClientOriginalExtension();
+            $tujuan_kartu_pelajar_anggota2 =
+                'storage/' . $applicantsData['namatim'];
+            $kartu_pelajar_anggota2->move(
+                $tujuan_kartu_pelajar_anggota2,
+                $nama_kartu_pelajar_anggota2
+            );
+        }
 
         //bukti pembayaran
         $bukti_pembayaran = $request->file('bukti_pembayaran');
@@ -175,21 +183,23 @@ class ApplicantController extends Controller
             $nama_bukti_pembayaran
         );
 
+        //naming all uploaded files in database
         $applicantsData['foto_ketua'] = $nama_foto_ketua;
         $applicantsData['foto_anggota1'] = $nama_foto_anggota1;
-        $applicantsData['foto_anggota2'] = $nama_foto_anggota2;
         $applicantsData['kartu_pelajar_ketua'] = $nama_kartu_pelajar_ketua;
         $applicantsData[
             'kartu_pelajar_anggota1'
         ] = $nama_kartu_pelajar_anggota1;
-        $applicantsData[
-            'kartu_pelajar_anggota2'
-        ] = $nama_kartu_pelajar_anggota2;
+
+        if (isset($applicantsData['nama_anggota2'])) {
+            $applicantsData['foto_anggota2'] = $nama_foto_anggota2;
+            $applicantsData[
+                'kartu_pelajar_anggota2'
+            ] = $nama_kartu_pelajar_anggota2;
+        }
         $applicantsData['bukti_pembayaran'] = $nama_bukti_pembayaran;
         $applicantsData['nama_pemilik_rekening'] =
             $request->nama_pemilik_rekening;
-
-        // dd($applicantsData);
 
         Applicant::create($applicantsData);
         User::create([

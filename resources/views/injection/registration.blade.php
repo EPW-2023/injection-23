@@ -164,8 +164,7 @@
                                 <input required type="file" class="form-control mb-3" id="foto_anggota1"
                                     name="foto_anggota1">
                                 <label for="foto_anggota2" class="form-label">Anggota 2</label>
-                                <input required type="file" class="form-control" id="foto_anggota2"
-                                    name="foto_anggota2">
+                                <input type="file" class="form-control" id="foto_anggota2" name="foto_anggota2">
                                 <div class="small">
                                     <label class="form-label mt-2 d-block">Format Penamaan :
                                         pasfoto_[posisi]_[nama]</label>
@@ -183,7 +182,7 @@
                                 <input required type="file" class="form-control mb-3" id="kartu_pelajar_anggota1"
                                     name="kartu_pelajar_anggota1">
                                 <label for="kartu_pelajar_anggota2" class="form-label">Anggota 2</label>
-                                <input required type="file" class="form-control" id="kartu_pelajar_anggota2"
+                                <input type="file" class="form-control" id="kartu_pelajar_anggota2"
                                     name="kartu_pelajar_anggota2">
                                 <div class="small">
                                     <label class="form-label mt-2 d-block">Format Penamaan :

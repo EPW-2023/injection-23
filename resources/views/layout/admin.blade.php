@@ -70,7 +70,7 @@
                 </div>
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('admin-user') }}">
-                        <span>Create New Users</span>
+                        <span>Create New Admin</span>
                     </a>
                 </li>
             @endif

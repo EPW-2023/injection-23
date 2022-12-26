@@ -33,7 +33,7 @@ return new class extends Migration {
             $table->string('foto_anggota2')->nullable();
             $table->string('kartu_pelajar_ketua');
             $table->string('kartu_pelajar_anggota1');
-            $table->string('kartu_pelajar_anggota2');
+            $table->string('kartu_pelajar_anggota2')->nullable();
             $table->string('nama_pemilik_rekening');
             $table->string('bukti_pembayaran');
         });
