@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\RegistrationFeeController;
 use Illuminate\Support\Facades\Route;
@@ -50,11 +51,21 @@ Route::post('applicant-logout', [
 ])->name('applicant-logout');
 
 //ROUTE DASHBOARD
-Route::get('/dashboard', function () {
-    return view('injection.dashboard', [
-        'title' => 'INJECTION Dashboard',
-    ]);
-})->middleware('auth');
+Route::middleware(['auth'])->group(function () {
+    Route::prefix('dashboard')->group(function () {
+        Route::get('/', [DashboardController::class, 'dashboardIndex'])->name(
+            'dashboard-page '
+        );
+        Route::get('/submission-paper', [
+            DashboardController::class,
+            'submissionIndex',
+        ])->name('submission-page');
+        Route::post('/submission-paper', [
+            DashboardController::class,
+            'submissionPost',
+        ])->name('submission-post');
+    });
+});
 
 //ROUTE NOT VERIFIED YET!
 Route::get('/not-verified', function () {
@@ -74,7 +85,6 @@ Route::middleware(['auth', 'role:Dev'])->group(function () {
         );
     });
 });
-
 //Admin
 Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
     Route::prefix('admin')->group(function () {
@@ -86,12 +96,32 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
         Route::get('/team', [AdminController::class, 'teamIndex'])->name(
             'admin-team'
         );
+        //ROUTE PAPER SUBMISSION
+        Route::get('/submission-paper', [
+            AdminController::class,
+            'submissionIndex',
+        ])->name('admin-submission');
         //ROUTE BUAT UBAH-UBAH REGISTRATION FEE
         Route::resource('/registration-fee', RegistrationFeeController::class);
         Route::get('/uploaded-files', [
             DownloadController::class,
             'index',
         ])->name('uploaded-file');
+
+        //ROUTE VERIFICATION
+        Route::get('/verification', [
+            AdminController::class,
+            'verificationIndex',
+        ])->name('admin-verification');
+        Route::get('/verification/{user:id}/edit', [
+            AdminController::class,
+            'verifyPage',
+        ]);
+        Route::put('verification/{user:id}', [
+            AdminController::class,
+            'verifyUser',
+        ]);
+
         //ROUTE BUAT DOWNLOAD FILE2
         Route::get('/download-foto-ketua/{applicant:id}', [
             DownloadController::class,
@@ -120,6 +150,10 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
         Route::get('/download-bukti-pembayaran/{applicant:id}', [
             DownloadController::class,
             'downloadBuktiPembayaran',
+        ]);
+        Route::get('/download-paper-submission/{submission:id}', [
+            DownloadController::class,
+            'downloadPaperSubmission',
         ]);
     });
 });

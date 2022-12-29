@@ -1,7 +1,7 @@
 @extends('layout.admin')
 @section('admin')
     <h1>Applicant</h1>
-    <table class="table table-bordered table-responsive" style="width: 90%;">
+    <table class="table table-bordered table-responsive" style="width: 100%;">
         <thead>
             <tr>
                 <th scope="col">Sekolah</th>

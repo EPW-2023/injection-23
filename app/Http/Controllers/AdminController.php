@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Applicant;
 use App\Models\RegistrationFee;
+use App\Models\Submission;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -51,16 +52,36 @@ class AdminController extends Controller
             'regfee' => RegistrationFee::all(),
         ]);
     }
-    //show form for editing
-    public function regFeeEdit(RegistrationFee $registrationFee)
+    public function submissionIndex()
     {
-        return view('admin.edit-registration-fee', [
-            'registration_fee' => $registrationFee,
+        return view('admin.submission', [
+            'submissions' => Submission::all(),
         ]);
     }
 
-    //update method regFee
-    public function update(Request $request, $id)
+    //VERIFICATION CONTROLLERS
+    public function verificationIndex()
     {
+        return view('admin.verification', [
+            'users' => User::all(),
+        ]);
+    }
+
+    public function verifyPage(User $user)
+    {
+        return view('admin.edit-verification', [
+            'verification' => $user,
+        ]);
+    }
+
+    public function verifyUser(Request $request, User $user)
+    {
+        $rules = [
+            'verified' => ['required'],
+        ];
+        $validatedData = $request->validate($rules);
+        $validatedData['verified'] = 'true';
+        User::where('id', $user->id)->update($validatedData);
+        return redirect('/admin/verification');
     }
 }

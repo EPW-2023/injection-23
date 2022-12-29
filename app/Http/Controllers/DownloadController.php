@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Applicant;
+use App\Models\Submission;
 use Illuminate\Http\Request;
 
 class DownloadController extends Controller
@@ -84,5 +85,15 @@ class DownloadController extends Controller
         );
         return response()->download($path);
         // dd($path);
+    }
+    public function downloadPaperSubmission(Submission $submission)
+    {
+        $path = public_path(
+            'storage/submission paper/' .
+                $submission->submission_user .
+                '/' .
+                $submission->submission_paper
+        );
+        return response()->download($path);
     }
 }

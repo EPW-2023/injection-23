@@ -1,7 +1,5 @@
 @php
-    $guidebook = 'https://drive.google.com/drive/folders/1JcFBOlFvWUSL7-mNI7Gk9y_h1jOE0a_e';
-    $kisikisi = 'https://drive.google.com/file/d/1oJg07iaFFS5mn0c4hLv4G1nlmXNJ1zdN/view';
-    $banksoal = 'https://drive.google.com/drive/folders/14ofuArl0oIc7f7tWBZZGKJIi3_StyFNU';
+    $disabled = 'content-disabled opacity-50';
 @endphp
 @extends('layout.layout')
 @section('content')
@@ -11,69 +9,37 @@
         @if (auth()->user()->verified == 'true')
             <div class="d-flex justify-content-center">
                 <div class="body-dashboard">
-                    <div class="d-flex align-items-center gap-4">
-                        <img src="{{ asset('img/avatar.svg') }}" alt="avatar" width="150">
+                    <div class="d-flex justify-content-center">
                         <div>
-                            <h3>Hello, {{ auth()->user()->namatim }}</h3>
-                            <a href="#" class="registration-number">{{ auth()->user()->nomer_reg }}</a>
+                            <img src="{{ asset('img/avatar.svg') }}" alt="avatar" width="100">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p>Hello, Team {{ auth()->user()->username }}</p>
+                        <p>Silahkan lengkapi kelengkapan INJECTION berikut:</p>
+                    </div>
+                    <div class="dashboard-selection">
+                        <div class="dashboard-option">
+                            <a href="{{ route('submission-page') }}" class="text-decoration-none">
+                                <div class="selection-option guidebook">
+                                    <div class="mx-auto px-5 py-3">
+                                        <p>Pengumpulan paper science project (Gelombang I)</p>
+                                        <p class="small">14 November - 7 Januari</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="dashboard-selection">
-                        <div class="row mt-5 mx-auto" style="gap: 100px">
-                            <div class="col-md-5">
-                                <a href="{{ $guidebook }}" target="_blank" class="text-decoration-none">
-                                    <div class="selection-option guidebook d-flex align-items-center px-5">
-                                        <div>
-                                            <img src="{{ asset('img/book.svg') }}" alt="book icon" width="60">
-                                        </div>
-                                        <div>
-                                            <h3>Guidebook</h3>
-                                            <div class="small">EPC 2023 Guidebook</div>
-                                        </div>
+                        <div class="dashboard-option">
+                            <a href="#" class="text-decoration-none {{ $disabled }}">
+                                <div class="selection-option bank-soal">
+                                    <div class="mx-auto px-5 py-3">
+                                        <p>Pengumpulan paper science project (Gelombang II)</p>
+                                        <p class="small">8 Januari - 20 Januari</p>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-md-5">
-                                <a href="#" class="text-decoration-none">
-                                    <div class="selection-option team-card d-flex align-items-center px-5">
-                                        <div>
-                                            <img src="{{ asset('img/card.svg') }}" alt="book icon" width="60">
-                                        </div>
-                                        <div>
-                                            <h3>Team Card</h3>
-                                            <div class="small">Fill your team card</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row mt-5 mx-auto" style="gap: 100px">
-                            <div class="col-md-5">
-                                <a href="{{ $kisikisi }}" target="_blank" class="text-decoration-none">
-                                    <div class="selection-option kisi-kisi d-flex align-items-center px-5">
-                                        <div>
-                                            <img src="{{ asset('img/paper.svg') }}" alt="book icon" width="50">
-                                        </div>
-                                        <div>
-                                            <h3>Kisi-kisi</h3>
-                                            <div class="small">Kisi-kisi soal EPC 2023</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-5">
-                                <a href="{{ $banksoal }}" target="_blank" class="text-decoration-none">
-                                    <div class="selection-option bank-soal d-flex align-items-center px-5">
-                                        <div>
-                                            <img src="{{ asset('img/file.svg') }}" alt="book icon" width="50">
-                                        </div>
-                                        <div>
-                                            <h3>Bank Soal</h3>
-                                            <div class="small">Kumpulan Soal EPC 2023</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

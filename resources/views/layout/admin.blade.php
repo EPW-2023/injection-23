@@ -60,6 +60,16 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link " href="{{ route('admin-verification') }}">
+                    <span>Verification</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="{{ route('admin-submission') }}">
+                    <span>Paper Submission</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link " href="/admin/registration-fee">
                     <span>Registration Fee</span>
                 </a>

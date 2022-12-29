@@ -42,14 +42,6 @@
                     <td>
                         {{ $item->nama_pemilik_rekening }}
                     </td>
-                    {{-- <td>{{ $item->foto_ketua }}</td>
-                    <td>{{ $item->foto_anggota1 }}</td>
-                    <td>{{ $item->foto_anggota2 }}</td>
-                    <td>{{ $item->kartu_pelajar_ketua }}</td>
-                    <td>{{ $item->kartu_pelajar_anggota1 }}</td>
-                    <td>{{ $item->kartu_pelajar_anggota2 }}</td>
-                    <td>{{ $item->nama_pemilik_rekening }}</td>
-                    <td>{{ $item->bukti_pembayaran }}</td> --}}
                 </tr>
             @endforeach
         </tbody>
