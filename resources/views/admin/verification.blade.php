@@ -1,7 +1,7 @@
 @extends('layout.admin')
 @section('admin')
-    <h1>Paper Submission</h1>
-    <p>Berkas-berkas semua ada disini</p>
+    <h1>Verify Users</h1>
+    <p>Silahkan verif para user yang diinginkan pada tabel berikut :</p>
     <table class="table table-bordered" style="width: 70%">
         <thead>
             <tr>
