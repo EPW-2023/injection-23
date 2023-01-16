@@ -20,7 +20,7 @@
                     </div>
                     <div class="dashboard-selection">
                         <div class="dashboard-option">
-                            <a href="{{ route('submission-page') }}" class="text-decoration-none">
+                            <a href="#" class="text-decoration-none  {{ $disabled }}">
                                 <div class="selection-option guidebook">
                                     <div class="mx-auto px-5 py-3">
                                         <p>Pengumpulan paper science project (Gelombang I)</p>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="dashboard-selection">
                         <div class="dashboard-option">
-                            <a href="#" class="text-decoration-none {{ $disabled }}">
+                            <a href="{{ route('submission-page') }}" class="text-decoration-none">
                                 <div class="selection-option bank-soal">
                                     <div class="mx-auto px-5 py-3">
                                         <p>Pengumpulan paper science project (Gelombang II)</p>
