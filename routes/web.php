@@ -67,7 +67,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/submission-success', [
             DashboardController::class,
             'submissionSuccess',
-        ]);
+        ])->name('submission-success');
     });
 });
 

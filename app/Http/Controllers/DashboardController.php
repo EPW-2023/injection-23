@@ -48,6 +48,6 @@ class DashboardController extends Controller
         $validatedData['submission_paper'] = $nama_file_paper;
 
         Submission::create($validatedData);
-        return redirect('/dashboard');
+        return redirect(route('submission-success'));
     }
 }
