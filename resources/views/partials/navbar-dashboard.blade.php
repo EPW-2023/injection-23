@@ -34,11 +34,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">Home</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">About</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">EPC</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">INJECTION</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">Merch</a>
+                    <a href="#" class="d-block text-decoration-none my-2 link-modal">Logout</a>
                 </div>
             </div>
         </div>

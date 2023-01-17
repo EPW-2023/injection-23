@@ -21,6 +21,11 @@ class DashboardController extends Controller
             'title' => 'INJECTION Submission Paper',
         ]);
     }
+    public function submissionSuccess()
+    {
+        $title = 'SUCCESS';
+        return view('injection.success-submission', compact('title'));
+    }
     public function submissionPost(Request $request)
     {
         $submission_user = Auth::user()->username;

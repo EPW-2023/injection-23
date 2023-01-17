@@ -31,7 +31,7 @@ Route::get('/coming-soon', function () {
     ]);
 })->name('coming-soon');
 
-//success
+//SUCCESS
 Route::get('/success', function () {
     return view('success', [
         'title' => 'SUCCESS',
@@ -64,6 +64,10 @@ Route::middleware(['auth'])->group(function () {
             DashboardController::class,
             'submissionPost',
         ])->name('submission-post');
+        Route::get('/submission-success', [
+            DashboardController::class,
+            'submissionSuccess',
+        ]);
     });
 });
 
