@@ -16,7 +16,7 @@
                 <tr>
                     <td class="text-center">{{ $item->namatim }}</td>
                     <td class="text-center">{{ $item->username }}</td>
-                    <td class="text-center">{{ $item->verified }}</td>
+                    <td class="text-center">{{ $item->verified ? 'Verified' : 'Not Verified' }}</td>
                     <td class="text-center">
                         <a href="/admin/verification/{{ $item->id }}/edit" type="submit"
                             class="btn btn-success">Change</a>
